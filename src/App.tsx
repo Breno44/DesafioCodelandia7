@@ -1,26 +1,69 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  Container,
+  ContainerMask,
+  Content,
+  ContentHeader,
+  ContentBody,
+  ContentBodyLeft,
+  ContentBodyRight,
+  Names,
+  Year,
+} from "./appStyles";
+import LogoImg from "./assets/img/Logo.svg";
+import SageImg from "./assets/img/sage.svg";
+import SovaImg from "./assets/img/sova.svg";
+import OmenImg from "./assets/img/omen.svg";
+import PhoenixImg from "./assets/img/phoenix.svg";
+import { FiShare2, FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <ContainerMask>
+        <Content>
+          <ContentHeader>
+            <img src={LogoImg} alt="logo valorant" />
+            <h2>Riot Games</h2>
+            <FiShare2 size={24} color="#fff" />
+          </ContentHeader>
+          <ContentBody>
+            <ContentBodyLeft>
+              <h1>VALORANT</h1>
+              <div>
+                <div>
+                  <img src={OmenImg} alt="omen valorant" />
+                </div>
+                <div>
+                  <img src={SageImg} alt="sage valorant" />
+                </div>
+                <div>
+                  <img src={SovaImg} alt="sova valorant" />
+                </div>
+              </div>
+              <Names>
+                <p>Omen</p>
+                <p>Sage</p>
+                <p>Sova</p>
+              </Names>
+              <div>
+                <FiInstagram size={24} color="#fff" />
+                <FiTwitter size={24} color="#fff" />
+                <FiFacebook size={24} color="#fff" />
+              </div>
+            </ContentBodyLeft>
+            <ContentBodyRight>
+              <img src={PhoenixImg} />
+              <div>
+                <p>29</p>
+                <p>08</p>
+              </div>
+              <Year>
+                <span>2021</span>
+              </Year>
+            </ContentBodyRight>
+          </ContentBody>
+        </Content>
+      </ContainerMask>
+    </Container>
   );
 }
-
-export default App;
